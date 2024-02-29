@@ -4,6 +4,12 @@ import { Greet } from './Greet.tsx';
 
 test('Greet render correctly', () => {
     render(<Greet />);
-    const greetText = screen.getByText(/greet/i);
-    expect(greetText).toBeInTheDocument();
+    const textElement = screen.getByText(/hello/i);
+    expect(textElement).toBeInTheDocument();
+  });
+
+  test("Greet renders with a name", () => {
+    render(<Greet name="Saqi" />);
+    const textElement = screen.getByText("Hello Saqi");
+    expect(textElement).toBeInTheDocument();
   });
