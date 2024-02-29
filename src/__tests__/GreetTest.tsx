@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from "@testing-library/react";
 import { Greet } from "../components/greet/Greet.tsx";
 

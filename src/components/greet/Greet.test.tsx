@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Greet } from "./Greet.tsx";
 
@@ -18,7 +17,3 @@ describe("Nested", () => {
     expect(textElement).toBeInTheDocument();
   });
 });
-
-// it alternative to test
-// xit alternative to test.skip
-// fit alternative to test.only
