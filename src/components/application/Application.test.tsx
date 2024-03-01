@@ -85,5 +85,12 @@ describe("Application", () => {
 
     /** getByTitle End*/
 
+    /** getByTestId Start*/
+
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
+    /** getByTestId End*/
+
   });
 });
