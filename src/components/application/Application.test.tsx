@@ -45,24 +45,30 @@ describe("Application", () => {
 
     /** getByPlaceholderText End*/
 
-     /** getByLabelText Start*/
+    /** getByLabelText Start*/
 
-     const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
-     expect(nameElement2).toBeInTheDocument();
- 
-     const termsElement2 = screen.getByLabelText(
-       "I agree to the terms and conditions"
-     );
-     expect(termsElement2).toBeInTheDocument();
+    const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
+    expect(nameElement2).toBeInTheDocument();
 
-     /** getByLabelText End*/
+    const termsElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
+    expect(termsElement2).toBeInTheDocument();
 
-     /** getByText Start*/
+    /** getByLabelText End*/
+
+    /** getByText Start*/
 
     const paragraphElement = screen.getByText("All fields are mandatory");
     expect(paragraphElement).toBeInTheDocument();
 
-    /** getByLabelText End*/
+    /** getByText End*/
 
+    /** getByDisplayValue Start*/
+
+    const nameElement4 = screen.getByDisplayValue("Saqi");
+    expect(nameElement4).toBeInTheDocument();
+
+    /** getByDisplayValue End*/
   });
 });
