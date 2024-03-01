@@ -57,5 +57,12 @@ describe("Application", () => {
 
      /** getByLabelText End*/
 
+     /** getByText Start*/
+
+    const paragraphElement = screen.getByText("All fields are mandatory");
+    expect(paragraphElement).toBeInTheDocument();
+
+    /** getByLabelText End*/
+
   });
 });
