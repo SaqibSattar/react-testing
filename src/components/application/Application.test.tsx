@@ -5,6 +5,8 @@ describe("Application", () => {
   test("renders", () => {
     render(<Application />);
 
+    /** getByRole Start*/
+
     const pageHeading = screen.getByRole("heading", {
       level: 1,
     });
@@ -33,5 +35,15 @@ describe("Application", () => {
 
     const submitElement = screen.getByRole("button");
     expect(submitElement).toBeInTheDocument();
+
+    /** getByRole End*/
+
+    /** getByPlaceholderText Start */
+
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
+
+    /** getByPlaceholderText End*/
+
   });
 });
