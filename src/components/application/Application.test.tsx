@@ -38,12 +38,24 @@ describe("Application", () => {
 
     /** getByRole End*/
 
-    /** getByPlaceholderText Start */
+    /** getByPlaceholderText */
 
     const nameElement3 = screen.getByPlaceholderText("Fullname");
     expect(nameElement3).toBeInTheDocument();
 
     /** getByPlaceholderText End*/
+
+     /** getByLabelText Start*/
+
+     const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
+     expect(nameElement2).toBeInTheDocument();
+ 
+     const termsElement2 = screen.getByLabelText(
+       "I agree to the terms and conditions"
+     );
+     expect(termsElement2).toBeInTheDocument();
+
+     /** getByLabelText End*/
 
   });
 });
