@@ -78,5 +78,12 @@ describe("Application", () => {
 
     /** getByAltText End*/
 
+    /** getByTitle Start*/
+
+    const closeElement = screen.getByTitle("close");
+    expect(closeElement).toBeInTheDocument();
+
+    /** getByTitle End*/
+
   });
 });
