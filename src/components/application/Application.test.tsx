@@ -70,5 +70,13 @@ describe("Application", () => {
     expect(nameElement4).toBeInTheDocument();
 
     /** getByDisplayValue End*/
+
+    /** getByAltText Start*/
+
+    const imageElement = screen.getByAltText("a person with a laptop");
+    expect(imageElement).toBeInTheDocument();
+
+    /** getByAltText End*/
+
   });
 });
